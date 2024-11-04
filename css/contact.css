@@ -1,0 +1,343 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+/* Navbar Container */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+/* Tagline Styling */
+.navbar-tagline {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+}
+
+/* Hover Effects for Links */
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ff88;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Button Style for Contact Link */
+.contact-button {
+    background: #00ff88;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-button:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-tagline {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+
+/* Contact Page Hero */
+.contact-hero {
+    background: url('/imgs/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 3rem 2rem;
+    background-color: #f0f5f9;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Enhanced Button Styling */
+.btn-submit {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+}
+
+/* Contact Information Styling */
+.contact-info {
+    padding: 2rem;
+    background: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+/* Map Section */
+.map-section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.map-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Wrapper and Styling */
+.custom-footer {
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    text-align: left;
+}
+
+/* Logo and Contact Info */
+.footer-logo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.footer-logo-info img {
+    width: 100px;
+    margin-bottom: 0.2rem;
+}
+
+/* Address Info */
+.footer-address p {
+    margin: 0.1rem 0;
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+/* Quick Links */
+.footer-links ul,
+.footer-social-legal ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-links li,
+.footer-social-legal li {
+    margin: 0.2rem 0;
+}
+
+.footer-links a,
+.footer-social-legal a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover,
+.footer-social-legal a:hover {
+    color: #00ff88;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 0.5rem;
+    color: #aaa;
+    font-size: 0.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .map-container {
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

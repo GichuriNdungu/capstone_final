@@ -1,0 +1,317 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+/* Navbar Container */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+/* Tagline Styling */
+.navbar-tagline {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+}
+
+/* Hover Effects for Links */
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ff88;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Button Style for Contact Link */
+.contact-button {
+    background: #00ff88;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-button:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-tagline {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+/* Timeline Layout */
+.timeline {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    margin: 0;
+    padding: 4rem 0;
+    background-image: url('/imgs/fixed.jpg'); /* Background image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+    position: relative;
+    width: 45%;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+/* Alternating Item Alignment */
+.timeline-item:nth-child(odd) {
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: auto;
+}
+
+/* Connector Dots on Each Item */
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #00ff88;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(even):before {
+    left: -10px;
+    right: auto;
+}
+
+/* Styling for Timeline Content */
+.timeline-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h2 {
+    color: #00ff88;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* Timeline Description Styling */
+.timeline-description {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    z-index: 10;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    
+    /* Flexbox for even distribution */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+/* Smaller Images in Pop-Up */
+.description-img {
+    width: 50%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Space between image and text */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Positioning based on odd/even items */
+.timeline-item:nth-child(odd) .timeline-description {
+    left: 105%; /* Position description to the right of odd items */
+}
+
+.timeline-item:nth-child(even) .timeline-description {
+    right: 105%; /* Position description to the left of even items */
+}
+
+/* Ensure Description Pop-Up Takes Full Remaining Width */
+.timeline-item:hover .timeline-description {
+    width: calc(100vw - 45% - 20px); /* Fill remaining screen width */
+    height: 100%; /* Make the pop-up box fill the height of the timeline item */
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 80%;
+        margin: 1rem auto; /* Center on smaller screens */
+    }
+    .timeline-description {
+        width: 80%; 
+        position: static; 
+        margin-top: 1rem;
+    }
+}
+
+/* Footer Wrapper and Styling */
+.custom-footer {
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0; /* Minimal padding for a shorter footer */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.5rem; /* Reduced side padding */
+    text-align: left;
+}
+
+/* Logo and Contact Info */
+.footer-logo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.3rem; /* Minimal margin below logo section */
+}
+
+.footer-logo-info img {
+    width: 100px; /* Smaller logo */
+    margin-bottom: 0.2rem; /* Minimal space below logo */
+}
+
+/* Address Info */
+.footer-address p {
+    margin: 0.1rem 0; /* Very tight spacing between address lines */
+    color: #ccc;
+    font-size: 0.8rem; /* Smaller font size */
+}
+
+/* Quick Links */
+.footer-links ul,
+.footer-social-legal ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-links li,
+.footer-social-legal li {
+    margin: 0.2rem 0; /* Very tight spacing between links */
+}
+
+.footer-links a,
+.footer-social-legal a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem; /* Slightly smaller link font size */
+}
+
+.footer-links a:hover,
+.footer-social-legal a:hover {
+    color: #00ff88; /* Hover color */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 0.5rem; /* Reduced spacing above footer bottom text */
+    color: #aaa;
+    font-size: 0.75rem; /* Smaller font size for copyright text */
+}
