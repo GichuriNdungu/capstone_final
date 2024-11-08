@@ -24,10 +24,6 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 - CSS
 - JavaScript
 
-## Project Structure
-project-root/ │ ├── index.html ├── css/ │ └── styles.css ├── js/ │ └── scripts.js └── assets/ ├── images/ └── fonts/
-
-
 ## Installation and Setup
 1. Clone the repository:
     ```sh
