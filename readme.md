@@ -44,12 +44,10 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 - Prioritizing user privacy in the contact form.
 
 ## initial design and environment setup demonstration
-- Implemented responsive design using media queries.
-- Enhanced accessibility with ARIA roles and semantic HTML.
-- Integrated Formspree for secure contact form submissions.
 [view the initial design and environment setup here](https://drive.google.com/file/d/1Dy4qhJWemDUeQd3gko9IxglLZPcts74f/view?usp=sharing)
 
 ## Future Improvements
+- Adding lead generation metrics through a custom chatbot that can answer carbon market specific content
 - Adding more interactive elements using JavaScript.
 - Implementing a content management system (CMS) for easier updates.
 - Enhancing SEO with meta tags and structured data.
