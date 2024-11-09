@@ -10,7 +10,7 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 - [Project Structure](#project-structure)
 - [Installation and Setup](#installation-and-setup)
 - [Ethical Considerations](#ethical-considerations)
-- [Development Highlights](#development-highlights)
+- [initial design and environment setup demonstration](#development-highlights)
 - [Future Improvements](#future-improvements)
 
 ## Features
@@ -43,10 +43,11 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 - Ensuring accessibility for users with disabilities.
 - Prioritizing user privacy in the contact form.
 
-## Development Highlights
+## initial design and environment setup demonstration
 - Implemented responsive design using media queries.
 - Enhanced accessibility with ARIA roles and semantic HTML.
 - Integrated Formspree for secure contact form submissions.
+[view the initial design and environment setup here](https://drive.google.com/file/d/1Dy4qhJWemDUeQd3gko9IxglLZPcts74f/view?usp=sharing)
 
 ## Future Improvements
 - Adding more interactive elements using JavaScript.
