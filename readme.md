@@ -10,7 +10,7 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 - [Project Structure](#project-structure)
 - [Installation and Setup](#installation-and-setup)
 - [Ethical Considerations](#ethical-considerations)
-- [initial design and environment setup demonstration](#initial design and environment setup demonstration)
+- [initial design and environment setup demonstration](#initial-design-and-environment-setup-demonstration)
 - [Future Improvements](#future-improvements)
 
 ## Features
