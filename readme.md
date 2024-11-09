@@ -10,7 +10,7 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 - [Project Structure](#project-structure)
 - [Installation and Setup](#installation-and-setup)
 - [Ethical Considerations](#ethical-considerations)
-- [initial design and environment setup demonstration](#development-highlights)
+- [initial design and environment setup demonstration](#initial design and environment setup demonstration)
 - [Future Improvements](#future-improvements)
 
 ## Features
@@ -30,11 +30,11 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 ## Installation and Setup
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/reshift-africa-website.git
+    git clone https://github.com/gichurindungu/capstone_final.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd reshift-africa-website
+    cd capstone_final
     ```
 3. Open [`index.html`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Falu%2FDesktop%2FThe%20reshift%20website%20makeover%2Findex.html%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%5D "/Users/alu/Desktop/The reshift website makeover/index.html") in your preferred web browser.
 
