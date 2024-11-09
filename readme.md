@@ -19,6 +19,9 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
 - **Service and Sector Highlights**: A dedicated services section, including detailed information on renewable energy, sustainable agriculture, and carbon credit brokerage.
 - **Contact Form with Privacy-Focused Submission**: A contact form managed by Formspree to handle submissions securely.
 
+## Initial prototype Figma Design
+[View the Figma Design](https://drive.google.com/file/d/12-DyIzepXKL3rVU3O79qsTcqZJRwE7Pz/view?usp=sharing)
+
 ## Technologies Used
 - HTML
 - CSS
@@ -34,6 +37,7 @@ The Reshift Africa website is a fully responsive platform designed to promote Re
     cd reshift-africa-website
     ```
 3. Open [`index.html`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Falu%2FDesktop%2FThe%20reshift%20website%20makeover%2Findex.html%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%5D "/Users/alu/Desktop/The reshift website makeover/index.html") in your preferred web browser.
+
 
 ## Ethical Considerations
 - Ensuring accessibility for users with disabilities.
