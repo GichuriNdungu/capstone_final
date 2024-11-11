@@ -1,46 +1,49 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const cors = require('cors');
-const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
+app.use(express.json());
 app.use(cors());
-app.use(bodyParser.json());
 
-app.post('/contact', async (req, res) => {
-    const { name, email, message } = req.body;
 
-    if (!name || !email || !message) {
-        return res.status(400).json({ error: 'Please fill in all required fields.' });
+const uri = "mongodb+srv://martin:Martingichuri@offsetters.mcbtf.mongodb.net/?retryWrites=true&w=majority&appName=offsetters";
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("Connected to MongoDB Atlas"))
+    .catch(err => console.error("Error connecting to MongoDB:", err));
+
+
+const offsetterSchema = new mongoose.Schema({
+    name: String,
+    location: String,
+    offsetFocus: String,
+    CO2ReductionPotential: String
+});
+
+const Offsetter = mongoose.model('Offsetter', offsetterSchema);
+
+
+app.get('/offsetters', async (req, res) => {
+    try {
+        const offsetters = await Offsetter.find();
+        res.json(offsetters);
+    } catch (error) {
+        res.status(500).json({ message: 'Error retrieving offsetters' });
     }
-
-    
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'gichurindungu@gmail.com', 
-            pass: 'Martingichuri@399'  
-        }
-    });
+});
 
 
-    const mailOptions = {
-        from: email,
-        to: 'your-email@gmail.com', 
-        subject: `Contact Form Submission from ${name}`,
-        text: message
-    };
+app.post('/offsetters', async (req, res) => {
+    const { name, location, offsetFocus, CO2ReductionPotential } = req.body;
+    const newOffsetter = new Offsetter({ name, location, offsetFocus, CO2ReductionPotential });
 
     try {
-        await transporter.sendMail(mailOptions);
-        res.status(200).json({ message: 'Your message has been sent successfully!' });
+        await newOffsetter.save();
+        res.status(201).json(newOffsetter);
     } catch (error) {
-        res.status(500).json({ error: 'There was an error sending your message. Please try again later.' });
+        res.status(500).json({ message: 'Error adding offsetter' });
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
