@@ -310,7 +310,7 @@ header {
 
 /* Footer Bottom Section */
 .footer-bottom {
-    margin-top: 0.5rem; /* Reduced spacing above footer bottom text */
+    margin-top: 0.5rem; 
     color: #aaa;
     font-size: 0.75rem; /* Smaller font size for copyright text */
 }

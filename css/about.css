@@ -21,8 +21,7 @@ body {
     --accent-color: #00ff88;
 }
 
-/* Navigation */
-/* Navbar Container */
+
 header {
     background: #333;
     color: #fff;
@@ -288,105 +287,75 @@ header {
     color: #666;
 }
 
-/* Footer */
-
-/* Footer Wrapper for Margins Around Footer */
-.footer-wrapper {
-    padding: 2rem; /* Creates margin around the footer */
-    background-color: #f5f5f5; /* Background color for the page */
-}
-
-/* Full-Width Footer with Rounded Top Corners */
+/* Footer Wrapper and Styling */
 .custom-footer {
     width: 100%;
-    background-color: #222; /* Dark background color */
+    background-color: #222;
     color: #fff;
     text-align: center;
-    border-top-left-radius: 20px; /* Rounded top-left corner */
-    border-top-right-radius: 20px; /* Rounded top-right corner */
-    overflow: hidden; /* Ensures smooth edges on rounded corners */
-    padding: 2rem 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for floating effect */
+    padding: 0.5rem 0; /* Minimal padding for a shorter footer */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer Container */
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
     justify-content: space-around;
-}
-
-.footer-logo-info,
-.footer-address,
-.footer-links,
-.footer-social-legal {
-    flex: 1 1 200px;
-    max-width: 250px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.5rem; /* Reduced side padding */
     text-align: left;
 }
 
-.footer-logo-info img {
-    width: 150px;
-    margin-bottom: 0.5rem;
+/* Logo and Contact Info */
+.footer-logo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.3rem; /* Minimal margin below logo section */
 }
 
+.footer-logo-info img {
+    width: 100px; /* Smaller logo */
+    margin-bottom: 0.2rem; /* Minimal space below logo */
+}
+
+/* Address Info */
+.footer-address p {
+    margin: 0.1rem 0; /* Very tight spacing between address lines */
+    color: #ccc;
+    font-size: 0.8rem; /* Smaller font size */
+}
+
+/* Quick Links */
 .footer-links ul,
 .footer-social-legal ul {
-    list-style: none;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .footer-links li,
 .footer-social-legal li {
-    margin-bottom: 0.5rem;
+    margin: 0.2rem 0; /* Very tight spacing between links */
 }
 
 .footer-links a,
 .footer-social-legal a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    font-size: 0.85rem; /* Slightly smaller link font size */
 }
 
 .footer-links a:hover,
 .footer-social-legal a:hover {
-    color: #00ff88; /* Change to your preferred hover color */
+    color: #00ff88; /* Hover color */
 }
 
-/* Footer Bottom Text */
+/* Footer Bottom Section */
 .footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 1rem;
-    margin-top: 1rem;
-    font-size: 0.85rem;
+    margin-top: 0.5rem; 
     color: #aaa;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-logo-info, .footer-address, .footer-links, .footer-social-legal {
-        text-align: center;
-    }
-}
-
-
-/* Scroll Animations */
-.animate-fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.animate-fade.visible {
-    opacity: 1;
-    transform: translateY(0);
+    font-size: 0.75rem; /* Smaller font size for copyright text */
 }
