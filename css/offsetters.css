@@ -28,47 +28,104 @@ p {
     color: #555;
 }
 
-/* Navigation styling */
 header {
-    background-color:#333 ;
-    padding: 1rem;
+    background: #333;
     color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav {
+.navbar-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-nav .logo a {
-    color: #fff;
+/* Logo Styling */
+.nav-logo a {
     font-size: 1.5rem;
-    text-decoration: none;
     font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
 }
 
-nav .nav-links {
-    list-style: none;
+/* Tagline Styling */
+.navbar-tagline {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Nav Links Styling */
+.nav-links {
     display: flex;
     gap: 1.5rem;
 }
 
-nav .nav-links li a {
+.nav-links a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
 }
 
-nav .nav-links li a:hover,
-nav .nav-links li a.active {
-    color: #f9f9f9;
+/* Hover Effects for Links */
+.nav-links a:hover {
+    color: #00ff88;
 }
 
-/* Offsetters Section */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ff88;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Button Style for Contact Link */
+.contact-button {
+    background: #00ff88;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-button:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-tagline {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
 .offsetters-list {
     padding: 2rem 1rem;
     max-width: 1200px;
@@ -184,4 +241,19 @@ nav .nav-links li a.active {
     margin-top: 0.5rem; 
     color: #aaa;
     font-size: 0.75rem; 
+}
+.offsetter-card {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.offsetter-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
 }
