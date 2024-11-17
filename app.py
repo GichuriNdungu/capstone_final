@@ -4,10 +4,10 @@ from pymongo.server_api import ServerApi
 
 uri = "mongodb+srv://martin:martingichuri@offsetters.mcbtf.mongodb.net/?retryWrites=true&w=majority&appName=offsetters"
 
-# Create a new client and connect to the server
+
 client = MongoClient(uri, server_api=ServerApi('1'))
 
-# Get the database and collection
+
 
 db = client.reshift
 collection = db.offsetters
@@ -26,7 +26,7 @@ offsetters = [
 ]
 
 
-# Insert the new offsetter
+
 result = collection.insert_many(offsetters)
 
 print(f"Offsetter added successfully {result.inserted_ids}")
