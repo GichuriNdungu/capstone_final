@@ -3,57 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Offsetter</title>
-    <link rel="stylesheet" href="css/add_offsetter.css">
+    <title>Offsetters - Reshift Africa</title>
+    
+    <link rel="stylesheet" href="../css/offsetters.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+   
     <header>
         <div class="navbar-container">
             <div class="nav-logo">
                 <a href="index.html">Reshift Africa</a>
             </div>
-            <p class="navbar-tagline">Apply to become an offsetting partner!</p> 
+            <p class="navbar-tagline">A Strategic carbon offsetting Partner on The Continent</p> 
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="../index.html">Home</a>
                 <a href="sectors.html">Sectors</a>
                 <a href="offsetters.html">Offsetters</a>
                 <a href="contact.html" class="contact-button">Contact</a> <!-- Styled as a button -->
             </nav>
         </div>
     </header>
-    <main>
-        <form id="offsetter-form">
-            <label for="name">Company Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter company name" required>
 
+    <!-- Offsetters Section -->
+    <section class="offsetters-list">
+        <h2>Our Global Offsetting partners</h2>
+        <p>Explore global carbon offsetters looking for green project developers, just like yourself!.</p>
+        <div class="offsetters-container">
+            <!-- Cards will be dynamically populated here by JavaScript -->
+        </div>
+        <p>Looking to offset some Carbon?<a href="add_offsetter.html">Get in touch with us!</a></p>
+    </section>
 
-            <label for="website">Company Website:</label>
-            <input type="url" id="website" name="website" placeholder="Enter website">
-
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" placeholder="Enter location" required>
-
-            <label for="offsetFocus">Carbon Offset Focus:</label>
-            <input type="text" id="offsetFocus" name="offsetFocus" placeholder="e.g., Forestry" required>
-
-            <label for="CO2ReductionPotential">CO₂ Reduction Potential (e.g., 50 tons per year):</label>
-            <input type="text" id="CO2ReductionPotential" name="CO2ReductionPotential" placeholder="e.g., 50 tons per year" required>
-
-            <lable for="contact">Contact Email:</lable>
-            <input type="email" id="contact" name="contact" placeholder="Enter contact email" required>
-
-
-            <button type="submit">Submit</button>
-        </form>
-        <div id="form-response"></div>
-    </main>
+    <!-- Footer -->
     <footer class="custom-footer">
         <div class="footer-container">
+            <!-- Company Logo and Info -->
             <div class="footer-logo-info">
-                <img src="/imgs/logo_transparent.png" alt="Reshift Africa Logo" class="footer-logo">
+                <img src="../imgs/logo_transparent.png" alt="Reshift Africa Logo" class="footer-logo">
                 <p>info(at)reshift.africa</p>
             </div>
-    
+
             <!-- Contact Address Info -->
             <div class="footer-address">
                 <p>Reshift Africa Ltd.</p>
@@ -61,16 +52,16 @@
                 <p>1 KN 78 St</p>
                 <p>Kigali, Rwanda</p>
             </div>
-    
+
             <!-- Quick Links -->
             <div class="footer-links">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="sectors.html">Sectors & Countries</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-    
+
             <!-- Social Media and Legal Links -->
             <div class="footer-social-legal">
                 <ul>
@@ -78,7 +69,15 @@
                     <li><a href="privacy.html">Privacy Policy</a></li>
                 </ul>
             </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Reshift Africa Ltd. - All rights reserved</p>
+        </div>
     </footer>
-    <script src="js/add_offsetter.js"></script>
+
+    <!-- Link to JavaScript file for dynamic data loading -->
+    <script src="../js/offsetters.js"></script>
 </body>
 </html>

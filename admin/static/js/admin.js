@@ -20,10 +20,10 @@ async function fetchPendingOffsetters() {
     }
 }
 
-// Display offsetters on the page
+
 function displayOffsetters(offsetters) {
     const offsetterList = document.getElementById('offsetter-list');
-    offsetterList.innerHTML = ''; // Clear the container
+    offsetterList.innerHTML = '';
 
     offsetters.forEach(offsetter => {
         const card = createOffsetterCard(offsetter);
@@ -31,7 +31,7 @@ function displayOffsetters(offsetters) {
     });
 }
 
-// Filter offsetters based on search input
+
 function filterOffsetters() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
     const filteredOffsetters = allOffsetters.filter(offsetter => {
@@ -42,10 +42,9 @@ function filterOffsetters() {
         );
     });
 
-    displayOffsetters(filteredOffsetters); // Update the display with filtered results
+    displayOffsetters(filteredOffsetters);
 }
 
-// Create an offsetter card
 function createOffsetterCard(offsetter) {
     const card = document.createElement('div');
     card.className = 'offsetter-card';

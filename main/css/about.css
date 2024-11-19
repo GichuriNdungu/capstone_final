@@ -10,7 +10,15 @@ body {
     color: #333;
     background-color: #f5f5f5;
     line-height: 1.6;
-    overflow-x: hidden;
+}
+
+/* Root Colors */
+:root {
+    --primary-color: #00ff88;
+    --secondary-color: #333;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --accent-color: #00ff88;
 }
 
 
@@ -29,7 +37,7 @@ header {
     margin: 0 auto;
 }
 
-
+/* Logo Styling */
 .nav-logo a {
     font-size: 1.5rem;
     font-weight: bold;
@@ -38,7 +46,7 @@ header {
     margin-right: 2rem;
 }
 
-
+/* Tagline Styling */
 .navbar-tagline {
     flex: 1;
     text-align: center;
@@ -47,7 +55,7 @@ header {
     font-style: italic;
 }
 
-
+/* Nav Links Styling */
 .nav-links {
     display: flex;
     gap: 1.5rem;
@@ -62,7 +70,7 @@ header {
     position: relative;
 }
 
-
+/* Hover Effects for Links */
 .nav-links a:hover {
     color: #00ff88;
 }
@@ -111,135 +119,172 @@ header {
         gap: 1rem;
     }
 }
-/* Timeline Layout */
-.timeline {
-    position: relative;
-    width: 100vw; /* Full viewport width */
-    margin: 0;
-    padding: 4rem 0;
-    background-image: url('/imgs/fixed.jpg'); /* Background image */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+
+
+/* Hero Section */
+.hero {
+    background: url('../imgs/hero.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
-/* Timeline Item Styling */
-.timeline-item {
-    position: relative;
-    width: 45%;
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 2rem 0;
 }
 
-/* Alternating Item Alignment */
-.timeline-item:nth-child(odd) {
-    margin-right: auto;
-}
-
-.timeline-item:nth-child(even) {
-    margin-left: auto;
-}
-
-/* Connector Dots on Each Item */
-.timeline-item:before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    right: -10px;
-    width: 20px;
-    height: 20px;
-    background: #00ff88;
-    border-radius: 50%;
-}
-
-.timeline-item:nth-child(even):before {
-    left: -10px;
-    right: auto;
-}
-
-/* Styling for Timeline Content */
-.timeline-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+.hero h1 {
+    font-size: 3rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
 }
 
-.timeline-content h2 {
-    color: #00ff88;
-    font-size: 1.8rem;
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem; /* Adjust this value as needed */
+    color: #ddd;
+}
+
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--accent-color);
+}
+
+/* Section Structure */
+.section-padding {
+    padding: 4rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 4rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-section .about-tagline {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.key-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.value-item {
+    width: 200px;
+    text-align: center;
+}
+
+.value-item img {
+    width: 50px;
+    height: 50px;
     margin-bottom: 0.5rem;
 }
 
-.timeline-content p {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.6;
+.value-item h4 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
 }
-/* Timeline Description Styling */
-.timeline-description {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 0;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.95);
+
+.value-item p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.about-cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.about-cta-button:hover {
+    background: var(--accent-color);
+}
+
+.section-divider {
+    height: 4px;
+    width: 50px;
+    background: var(--primary-color);
+    margin: 1rem auto;
+    border-radius: 4px;
+}
+
+/* Services Section */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.service-item {
+    width: 300px;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 1.5rem;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.service-content p {
+    font-size: 1rem;
     color: #666;
-    line-height: 1.5;
-    z-index: 10;
-    overflow-y: auto; /* Enable scrolling if content overflows */
-    
-    /* Flexbox for even distribution */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-}
-
-/* Smaller Images in Pop-Up */
-.description-img {
-    width: 50%; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 1rem; /* Space between image and text */
-    border-radius: 8px; /* Optional rounded corners */
-}
-
-/* Positioning based on odd/even items */
-.timeline-item:nth-child(odd) .timeline-description {
-    left: 105%; /* Position description to the right of odd items */
-}
-
-.timeline-item:nth-child(even) .timeline-description {
-    right: 105%; /* Position description to the left of even items */
-}
-
-/* Ensure Description Pop-Up Takes Full Remaining Width */
-.timeline-item:hover .timeline-description {
-    width: calc(100vw - 45% - 20px); /* Fill remaining screen width */
-    height: 100%; /* Make the pop-up box fill the height of the timeline item */
-}
-
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .timeline-item {
-        width: 80%;
-        margin: 1rem auto; /* Center on smaller screens */
-    }
-    .timeline-description {
-        width: 80%; 
-        position: static; 
-        margin-top: 1rem;
-    }
 }
 
 /* Footer Wrapper and Styling */
@@ -313,4 +358,13 @@ header {
     margin-top: 0.5rem; 
     color: #aaa;
     font-size: 0.75rem; /* Smaller font size for copyright text */
+}
+@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
 }

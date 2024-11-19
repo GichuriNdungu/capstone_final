@@ -1,26 +1,24 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from bson.objectid import ObjectId
 from flask_cors import CORS
+import os
+from vercel_wsgi import make_wsgi_handler
 
 app = Flask(__name__)
 CORS(app)
 
-
 uri = "mongodb+srv://martin:martingichuri@offsetters.mcbtf.mongodb.net/?retryWrites=true&w=majority&appName=offsetters"
 client = MongoClient(uri, server_api=ServerApi('1'))
-
 
 db = client.reshift
 offsetters_collection = db.offsetters
 pending_collection = db.pending_approvals
 
-
 @app.route('/', methods=['GET'])
 def home():
     return jsonify({"message": "Welcome to the Offsetters API"}), 200
-
 
 @app.route('/offsetters', methods=['GET'])
 def get_offsetters():
@@ -99,7 +97,6 @@ def approve_offsetter(id):
     except Exception as e:
         return jsonify({"message": "Error approving offsetter", "error": str(e)}), 500
 
-# Reject a pending offsetter
 @app.route('/reject-offsetter/<id>', methods=['DELETE'])
 def reject_offsetter(id):
     try:
@@ -110,5 +107,9 @@ def reject_offsetter(id):
     except Exception as e:
         return jsonify({"message": "Error rejecting offsetter", "error": str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+
+handler = make_wsgi_handler(app)
