@@ -9,7 +9,8 @@
 1. [Project Overview](#project-overview)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
-4. [Installation and Setup](#installation-and-setup)
+4. [Local Installation and Setup](#installation-and-setup)
+5. [Deployed application links](#deployed-application)
 5. [Usage](#usage)
 6. [Project Architecture](#project-architecture)
 7. [Testing](#testing)
@@ -69,7 +70,7 @@ For a detailed walkthrough of the entire website, see demo here[]
 
 ---
 
-## Installation and Setup
+## Local Installation and Setup
 
 ### **Clone the Repository**
 ```bash
@@ -99,7 +100,7 @@ python server.py
 ```
 
 ## Frontend Setup
-1. Open the project folder in a code editor, navige to the index.html file at the root of each folder (admin/main) to as entry points to either the client side or the admin dashboard
+1. Open the project folder in a code editor, navigate to the index.html file at the root of each folder (admin/main) as entry points to either the client side or the admin dashboard
 ## Usage
 
 ### Admin Login:
@@ -108,6 +109,10 @@ python server.py
 
 ### Offsetters Page:
 - view the main client website at `/main/index.html`.
+
+## Deployed Application Links
+- [Main Client Website](https://reshift.vercel.app/index.html)
+- [Admin Dashboard](https://adminreshift.vercel.app/)
 
 ## Project Architecture
 ```plaintext
