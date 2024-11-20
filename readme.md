@@ -77,3 +77,104 @@ The platform focuses on sustainability, transparency, and efficient use of techn
 ```bash
 git clone https://github.com/GichuriNdungu/capstone_final.git
 cd capstone_final
+
+```markdown
+## Backend Setup
+
+### Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### Set up environment variables in a .env file:
+```plaintext
+SECRET_KEY=your_secret_key
+MONGO_URI=your_mongo_db_uri
+```
+
+### Run the Flask server:
+```bash
+python server.py
+```
+
+## Frontend Setup
+1. Open the project folder in a code editor (e.g., VS Code).
+2. Ensure the `index.html` file and other assets are linked correctly.
+
+## Usage
+
+### Admin Login:
+- Visit `/login.html` and enter admin credentials.
+- Access the admin dashboard to manage offsetter applications.
+
+### Offsetter Application:
+- Navigate to `/add-offsetter.html` to submit applications.
+
+### Offsetters Page:
+- View dynamically displayed approved offsetters at `/offsetters.html`.
+
+## Project Architecture
+```plaintext
++---------------------+         +-------------------------+
+|  Client/Browser     |         |  Admin Dashboard        |
+|  (Users & Admins)   |         |                         |
++---------------------+         +-------------------------+
+         |                                 |
+         |                                 |
+         v                                 v
++---------------------------------------------------+
+|                     Backend                      |
+|              (Flask Python Server)               |
+| +---------------------------------------------+  |
+| |             Routing & APIs                  |  |
+| |  - Serve HTML pages (login, index, etc.)    |  |
+| |  - API Endpoints for CRUD operations        |  |
+| +---------------------------------------------+  |
+|        Data Validation & Authentication         |
+| +---------------------------------------------+  |
+| | Admin Login & Session Management            |  |
+| | Admin Authorization                         |  |
+| +---------------------------------------------+  |
+|                                                   |
++---------------------------------------------------+
+         |                                 |
+         v                                 v
++---------------------------------------------------+
+|                   Database (MongoDB)             |
+| +---------------------------------------------+  |
+| | Collections:                                |  |
+| |  - offsetters (approved offsetters)        |  |
+| |  - pending-approval (applications)         |  |
+| +---------------------------------------------+  |
+|                                                   |
++---------------------------------------------------+
+```
+
+## Screenshots
+- **Login Page:**
+- **Admin Dashboard:**
+- **Offsetters Page:**
+- **Offsetter Application Form:**
+
+## Testing
+
+### Unit Testing
+- Tested individual endpoints for CRUD operations.
+- Verified form validation and error handling.
+
+### Integration Testing
+- Ensured seamless interaction between frontend and backend for data retrieval.
+
+### Functional Testing
+- Verified that all features align with the functional requirements.
+
+## Future Enhancements
+- **Project Developers Module:** Allow project developers to connect with offsetters.
+- **Analytics Dashboard:** Display statistics and trends for offsetting partnerships.
+- **Email Notifications:** Notify admins and offsetters about application updates.
+
+## Acknowledgments
+Special thanks to the instructors and peers who provided guidance and support throughout the project development process.
+```
+
+Feel free to adjust any sections as needed!
