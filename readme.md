@@ -1,6 +1,6 @@
 # Reshift Africa - Capstone Project
 
-**Reshift Africa** is a comprehensive platform designed to facilitate carbon offsetting partnerships by connecting offsetters and project developers. This website was developed as the final year capstone project, showcasing the integration of modern web technologies, user-centered design, and database-driven functionality.
+**Reshift Africa** is a comprehensive end-to-end website designed to facilitate carbon offsetting partnerships by connecting offsetters and project developers. This website was developed as the final year capstone project, showcasing the integration of modern web technologies, user-centered design, and database-driven functionality.
 
 ---
 
@@ -12,10 +12,9 @@
 4. [Installation and Setup](#installation-and-setup)
 5. [Usage](#usage)
 6. [Project Architecture](#project-architecture)
-7. [Screenshots](#screenshots)
-8. [Testing](#testing)
-9. [Future Enhancements](#future-enhancements)
-10. [Acknowledgments](#acknowledgments)
+7. [Testing](#testing)
+8. [Future Enhancements](#future-enhancements)
+9. [Authors](#Author)
 
 ---
 
@@ -24,9 +23,10 @@
 The primary goal of this platform is to streamline carbon offsetting initiatives by:
 - Allowing **offsetters** to submit applications to partner with Reshift Africa.
 - Enabling **admins** to manage offsetter applications via a secure dashboard.
-- Displaying approved offsetters dynamically on a user-friendly page.
+- Displaying approved offsetters dynamically on a user-friendly page
+- Enabling Reshift Africa to generate leads on potential project developers through brand awareness
 
-The platform focuses on sustainability, transparency, and efficient use of technology to promote climate action through accessible partnerships.
+For a detailed walkthrough of the entire website, see demo here[]
 
 ---
 
@@ -37,7 +37,6 @@ The platform focuses on sustainability, transparency, and efficient use of techn
 - **Offsetters Page**: Dynamic display of approved offsetters with rich, responsive design.
 - **Offsetter Application Form**: A submission form for offsetters to provide their details.
 - **Admin Dashboard**: Allows admins to approve/reject applications and search pending offsetters.
-- **Responsive Design**: Fully functional across devices.
 
 ### **Backend Features**
 - **RESTful APIs**: Handle dynamic data operations (CRUD) for offsetters and pending applications.
@@ -46,7 +45,7 @@ The platform focuses on sustainability, transparency, and efficient use of techn
 
 ### **Testing and Deployment**
 - Comprehensive testing for validation, integration, and system performance.
-- Deployed on a cloud platform with seamless frontend-backend communication.
+- Deployed on Vercel with seamless frontend-backend communication.
 
 ---
 
@@ -54,7 +53,6 @@ The platform focuses on sustainability, transparency, and efficient use of techn
 
 ### **Frontend**
 - HTML, CSS, JavaScript
-- Responsive design principles
 
 ### **Backend**
 - Python (Flask)
@@ -64,7 +62,7 @@ The platform focuses on sustainability, transparency, and efficient use of techn
 - MongoDB (Atlas Cloud Database)
 
 ### **Deployment**
-- Deployed using Railway
+- Deployed using Vercel
 
 ### **Version Control**
 - Git and GitHub
@@ -78,10 +76,15 @@ The platform focuses on sustainability, transparency, and efficient use of techn
 git clone https://github.com/GichuriNdungu/capstone_final.git
 cd capstone_final
 ```
+### To Acess the Admin dashboard:
 
+```bash 
+cd admin
+```
+### To Access the Reshift client website
 
 ```bash
-pip install -r requirements.txt
+cd main
 ```
 
 ### Set up environment variables in a .env file:
@@ -96,20 +99,15 @@ python server.py
 ```
 
 ## Frontend Setup
-1. Open the project folder in a code editor (e.g., VS Code).
-2. Ensure the `index.html` file and other assets are linked correctly.
-
+1. Open the project folder in a code editor, navige to the index.html file at the root of each folder (admin/main) to as entry points to either the client side or the admin dashboard
 ## Usage
 
 ### Admin Login:
-- Visit `/login.html` and enter admin credentials.
+- Visit `/admin/login.html` and enter admin credentials.
 - Access the admin dashboard to manage offsetter applications.
 
-### Offsetter Application:
-- Navigate to `/add-offsetter.html` to submit applications.
-
 ### Offsetters Page:
-- View dynamically displayed approved offsetters at `/offsetters.html`.
+- view the main client website at `/main/index.html`.
 
 ## Project Architecture
 ```plaintext
@@ -148,11 +146,6 @@ python server.py
 +---------------------------------------------------+
 ```
 
-## Screenshots
-- **Login Page:**
-- **Admin Dashboard:**
-- **Offsetters Page:**
-- **Offsetter Application Form:**
 
 ## Testing
 
@@ -167,12 +160,8 @@ python server.py
 - Verified that all features align with the functional requirements.
 
 ## Future Enhancements
-- **Project Developers Module:** Allow project developers to connect with offsetters.
 - **Analytics Dashboard:** Display statistics and trends for offsetting partnerships.
 - **Email Notifications:** Notify admins and offsetters about application updates.
 
-## Acknowledgments
-Special thanks to the instructors and peers who provided guidance and support throughout the project development process.
-```
-
-Feel free to adjust any sections as needed!
+## Author
+Martin Ndungu
