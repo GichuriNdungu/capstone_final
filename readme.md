@@ -77,11 +77,9 @@ The platform focuses on sustainability, transparency, and efficient use of techn
 ```bash
 git clone https://github.com/GichuriNdungu/capstone_final.git
 cd capstone_final
+```
 
-```markdown
-## Backend Setup
 
-### Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
