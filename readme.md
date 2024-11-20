@@ -1,53 +1,79 @@
-# Reshift Africa Website Project
+# Reshift Africa - Capstone Project
 
-## Overview
-The Reshift Africa website is a fully responsive platform designed to promote Reshift Africa’s sustainable initiatives and services. This project focuses on creating an accessible, visually appealing, and user-centered experience that aligns with Reshift’s mission of fostering sustainable growth across Africa. Built with HTML, CSS, and JavaScript, the website showcases essential features such as a privacy-conscious contact form, a detailed services section, and multiple accessibility enhancements.
+**Reshift Africa** is a comprehensive platform designed to facilitate carbon offsetting partnerships by connecting offsetters and project developers. This website was developed as the final year capstone project, showcasing the integration of modern web technologies, user-centered design, and database-driven functionality.
+
+---
 
 ## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Installation and Setup](#installation-and-setup)
-- [Ethical Considerations](#ethical-considerations)
-- [initial design and environment setup demonstration](#initial-design-and-environment-setup-demonstration)
-- [Future Improvements](#future-improvements)
+
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Installation and Setup](#installation-and-setup)
+5. [Usage](#usage)
+6. [Project Architecture](#project-architecture)
+7. [Screenshots](#screenshots)
+8. [Testing](#testing)
+9. [Future Enhancements](#future-enhancements)
+10. [Acknowledgments](#acknowledgments)
+
+---
+
+## Project Overview
+
+The primary goal of this platform is to streamline carbon offsetting initiatives by:
+- Allowing **offsetters** to submit applications to partner with Reshift Africa.
+- Enabling **admins** to manage offsetter applications via a secure dashboard.
+- Displaying approved offsetters dynamically on a user-friendly page.
+
+The platform focuses on sustainability, transparency, and efficient use of technology to promote climate action through accessible partnerships.
+
+---
 
 ## Features
-- **Responsive Design**: The website is designed to be fully responsive, adapting smoothly to various screen sizes.
-- **Intuitive Navigation**: A clean and simple navigation bar for easy access to core pages such as Home, Services, Sectors, and Contact.
-- **Service and Sector Highlights**: A dedicated services section, including detailed information on renewable energy, sustainable agriculture, and carbon credit brokerage.
-- **Contact Form with Privacy-Focused Submission**: A contact form managed by Formspree to handle submissions securely.
 
-## Initial prototype Figma Design
-[View the Figma Design](https://drive.google.com/file/d/12-DyIzepXKL3rVU3O79qsTcqZJRwE7Pz/view?usp=sharing)
+### **Frontend Features**
+- **User Authentication**: Secure login system for admins.
+- **Offsetters Page**: Dynamic display of approved offsetters with rich, responsive design.
+- **Offsetter Application Form**: A submission form for offsetters to provide their details.
+- **Admin Dashboard**: Allows admins to approve/reject applications and search pending offsetters.
+- **Responsive Design**: Fully functional across devices.
+
+### **Backend Features**
+- **RESTful APIs**: Handle dynamic data operations (CRUD) for offsetters and pending applications.
+- **Session Management**: Secure authentication and admin session handling.
+- **Database Integration**: MongoDB for storing offsetter details.
+
+### **Testing and Deployment**
+- Comprehensive testing for validation, integration, and system performance.
+- Deployed on a cloud platform with seamless frontend-backend communication.
+
+---
 
 ## Technologies Used
-- HTML
-- CSS
-- JavaScript
+
+### **Frontend**
+- HTML, CSS, JavaScript
+- Responsive design principles
+
+### **Backend**
+- Python (Flask)
+- REST API architecture
+
+### **Database**
+- MongoDB (Atlas Cloud Database)
+
+### **Deployment**
+- Deployed using Railway
+
+### **Version Control**
+- Git and GitHub
+
+---
 
 ## Installation and Setup
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/gichurindungu/capstone_final.git
-    ```
-2. Navigate to the project directory:
-    ```sh
-    cd capstone_final
-    ```
-3. Open [`index.html`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Falu%2FDesktop%2FThe%20reshift%20website%20makeover%2Findex.html%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%5D "/Users/alu/Desktop/The reshift website makeover/index.html") in your preferred web browser.
 
-
-## Ethical Considerations
-- Ensuring accessibility for users with disabilities.
-- Prioritizing user privacy in the contact form.
-
-## initial design and environment setup demonstration
-[view the initial design and environment setup here](https://drive.google.com/file/d/1Dy4qhJWemDUeQd3gko9IxglLZPcts74f/view?usp=sharing)
-
-## Future Improvements
-- Adding lead generation metrics through a custom chatbot that can answer carbon market specific content
-- Adding more interactive elements using JavaScript.
-- Implementing a content management system (CMS) for easier updates.
-- Enhancing SEO with meta tags and structured data.
+### **Clone the Repository**
+```bash
+git clone https://github.com/GichuriNdungu/capstone_final.git
+cd capstone_final
