@@ -10,7 +10,7 @@ const images = [
 
 async function fetchOffsetters() {
     try {
-        const response = await fetch('http://127.0.0.1:5000/offsetters');
+        const response = await fetch('https://re-api-topaz.vercel.app/offsetters');
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }

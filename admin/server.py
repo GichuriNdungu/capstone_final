@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, session, redirect, url_for, render_template, send_from_directory
+from flask import Flask, jsonify, request, session, redirect, url_for, send_from_directory
 from flask_cors import CORS
 import os
 from dotenv import load_dotenv
@@ -14,8 +14,7 @@ print(f"Loaded SECRET_KEY: {os.getenv('SECRET_KEY')}")
 ADMINS = {
     "martin": "password123",
 }
-
-@app.route('/login', methods=['GET'])
+@app.route('/', methods=['GET'])
 def show_login_page():
     return send_from_directory('.', 'login.html')  
 
@@ -47,5 +46,4 @@ def admin_dashboard():
         return redirect(url_for('show_login_page'))
     return send_from_directory('.', 'admin.html')
 
-if __name__ == '__main__':
-    app.run(port=5500, debug=True)
+app = app

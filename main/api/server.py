@@ -4,7 +4,6 @@ from pymongo.server_api import ServerApi
 from bson.objectid import ObjectId
 from flask_cors import CORS
 import os
-from vercel_wsgi import make_wsgi_handler
 
 app = Flask(__name__)
 CORS(app)
@@ -112,4 +111,4 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port)
 
 
-handler = make_wsgi_handler(app)
+app =app

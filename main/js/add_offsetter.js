@@ -11,7 +11,7 @@ document.getElementById('offsetter-form').addEventListener('submit', async (even
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/add-offsetters', {
+        const response = await fetch('https://re-api-topaz.vercel.app/add-offsetters', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData),

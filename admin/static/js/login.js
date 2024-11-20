@@ -14,14 +14,14 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         const password = document.getElementById('password').value;
     
         try {
-            const response = await fetch('http://127.0.0.1:5500/login', {
+            const response = await fetch('/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
             });
     
             if (response.ok) {
-                window.location.href = 'http://127.0.0.1:5500/admin'; 
+                window.location.href = '/admin'; 
             } else {
                 document.getElementById('login-error').style.display = 'block';
             }
@@ -32,18 +32,17 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     
 
     try {
-        // Send login request to the server
-        const response = await fetch('http://127.0.0.1:5500/login', {
+        const response = await fetch('/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
         });
 
         if (response.ok) {
-            // Redirect to admin page upon successful login
-            window.location.href = 'http://127.0.0.1:5500/admin';
+            
+            window.location.href = '/admin';
         } else {
-            // Display error message for invalid credentials
+            
             errorDiv.textContent = 'Invalid credentials. Please try again.';
             errorDiv.style.display = 'block';
         }

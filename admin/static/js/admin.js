@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetch and display all pending offsetters
 async function fetchPendingOffsetters() {
     try {
-        const response = await fetch('http://127.0.0.1:5000/pending-offsetters');
+        const response = await fetch('https://re-api-topaz.vercel.app/pending-offsetters');
         allOffsetters = await response.json(); // Store all offsetters in a global variable
 
         displayOffsetters(allOffsetters);
@@ -77,7 +77,7 @@ function createOffsetterCard(offsetter) {
 // Approve an offsetter
 async function approveOffsetter(id) {
     try {
-        const response = await fetch(`http://127.0.0.1:5000/approve-offsetter/${id}`, {
+        const response = await fetch(`https://re-api-topaz.vercel.app/approve-offsetter/${id}`, {
             method: 'POST',
         });
 
@@ -96,7 +96,7 @@ async function approveOffsetter(id) {
 // Reject an offsetter
 async function rejectOffsetter(id) {
     try {
-        const response = await fetch(`http://127.0.0.1:5000/reject-offsetter/${id}`, {
+        const response = await fetch(`https://re-api-topaz.vercel.app/reject-offsetter/${id}`, {
             method: 'DELETE',
         });
 

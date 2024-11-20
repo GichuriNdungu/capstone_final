@@ -2,123 +2,158 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Inter', sans-serif; /* Tailwind default font */
+    background-color: #f3f4f6; /* Neutral gray */
+    color: #111827; /* Tailwind gray-900 */
 }
 
 /* Header Styling */
 header {
     text-align: center;
-    background-color: #021402d0;
-    color: white;
-    padding: 1.5rem;
+    background: linear-gradient(90deg, #047857, #10b981); /* Green gradient */
+    color: #ffffff;
+    padding: 2rem 1.5rem;
     margin-bottom: 2rem;
+    border-radius: 0 0 1rem 1rem; /* Rounded bottom corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.25rem; /* Tailwind text-3xl */
+    font-weight: 700; /* Tailwind font-bold */
     margin: 0;
+    letter-spacing: 0.025em; /* Slight spacing for readability */
 }
 
 header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-size: 1.125rem; /* Tailwind text-lg */
+    opacity: 0.85; /* Subtle contrast */
 }
 
-
+/* Main Content */
 main {
-    max-width: 1200px;
+    max-width: 1024px; /* Tailwind max-w-3xl */
     margin: 0 auto;
     padding: 1rem;
 }
 
+/* Search Bar */
 #search-bar {
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     text-align: center;
 }
 
 #search-input {
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem; /* Tailwind text-base */
+    border: 2px solid #d1d5db; /* Tailwind border-gray-300 */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #search-input:focus {
-    border-color: #4caf50;
+    border-color: #10b981; /* Tailwind green-500 */
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3); /* Glow effect */
 }
 
-
+/* Pending Offsetters */
 #pending-offsetters {
     margin-top: 2rem;
 }
 
 #offsetter-list {
-    display: flex; /* Use flexbox for alignment */
-    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem; /* Space between cards */
-    justify-content: space-between; /* Distribute cards evenly */
+    justify-content: space-evenly; /* Evenly distribute cards */
 }
 
 /* Offsetter Card */
 .offsetter-card {
-    background-color: white;
+    background-color: #ffffff; /* Tailwind white */
     padding: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(30% - 1rem); /* Take up about 30% of the container */
-    min-width: 250px; /* Ensure cards don’t shrink too much */
-    max-width: 300px; /* Prevent cards from being too wide */
+    border: 1px solid #e5e7eb; /* Tailwind border-gray-200 */
+    border-radius: 0.75rem; /* Tailwind rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 1rem); /* Three cards per row */
+    max-width: 300px; /* Limit card width */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.offsetter-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+.offsetter-card h3 {
+    font-size: 1.25rem; /* Tailwind text-xl */
+    font-weight: 600; /* Tailwind font-semibold */
+    margin-bottom: 0.5rem;
+    color: #111827; /* Tailwind gray-900 */
+}
+
+.offsetter-card p {
+    font-size: 1rem; /* Tailwind text-base */
+    color: #6b7280; /* Tailwind gray-500 */
+    margin: 0.25rem 0;
 }
 
 /* Approve/Reject Buttons */
 button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
+    font-weight: 500; /* Slightly bold */
     border: none;
-    border-radius: 4px;
+    border-radius: 0.5rem; /* Rounded corners */
     cursor: pointer;
-    margin-right: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 button.approve {
-    background-color: #4caf50;
-    color: white;
-    margin-bottom: 1rem;
+    background-color: #10b981; /* Tailwind green-500 */
+    color: #ffffff;
 }
 
 button.approve:hover {
-    background-color: #45a049;
+    background-color: #047857; /* Tailwind green-700 */
+    transform: scale(1.05); /* Slight zoom */
 }
 
 button.reject {
-    background-color: #f44336;
-    color: white;
+    background-color: #ef4444; /* Tailwind red-500 */
+    color: #ffffff;
 }
 
 button.reject:hover {
-    background-color: #e53935;
+    background-color: #b91c1c; /* Tailwind red-700 */
+    transform: scale(1.05); /* Slight zoom */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    #offsetter-list {
+        justify-content: center; /* Center cards on smaller screens */
+    }
     .offsetter-card {
-        flex: 1 1 calc(45% - 1rem); /* Adjust card width on smaller screens */
+        flex: 1 1 calc(45% - 1rem); /* Two cards per row */
     }
 }
 
 @media (max-width: 480px) {
     .offsetter-card {
-        flex: 1 1 100%; /* Stack cards vertically on very small screens */
+        flex: 1 1 100%; /* Stack cards vertically */
     }
 }
