@@ -27,7 +27,7 @@ The primary goal of this platform is to streamline carbon offsetting initiatives
 - Displaying approved offsetters dynamically on a user-friendly page
 - Enabling Reshift Africa to generate leads on potential project developers through brand awareness
 
-For a detailed walkthrough of the entire website, see demo here[]
+For a detailed walkthrough of the entire website, [see demo here](https://drive.google.com/file/d/1GantPWA4HDgqdHXoMQACgubZVI_pVb5O/view?usp=sharing)
 
 ---
 
